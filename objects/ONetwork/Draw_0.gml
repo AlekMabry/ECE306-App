@@ -27,8 +27,9 @@ else
 
 draw_set_color(c_black);
 draw_set_font(FMain);
-draw_text(16, 256, string_format(global.vL, 4, 2));
-draw_text(16+string_width("000000000"), 256, round(duty(global.vL)))
-draw_text(16, 512, string_format(global.vR, 4, 2));
-draw_text(16+string_width("000000000"), 512, round(duty(global.vR)))
-draw_text(16, 768, global.cmd);
+//draw_text(16, 256, string_format(global.vL, 4, 2));
+//draw_text(16+string_width("000000000"), 256, round(duty(global.vL)))
+//draw_text(16, 512, string_format(global.vR, 4, 2));
+//draw_text(16+string_width("000000000"), 512, round(duty(global.vR)))
+var simpleCmd = string_copy(global.cmd, 6, string_length(global.cmd) - 6);
+draw_text(commandOffset + 16, 16, simpleCmd);

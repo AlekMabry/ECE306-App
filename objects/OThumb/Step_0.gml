@@ -19,13 +19,13 @@ if (bClicked)
 
 	var len = sqrt(power(xVec, 2) + power(yVec, 2));
 
-	if (len > 160)
+	if (len > real_radius)
 	{	
 		var xVecNorm = xVec / len;
 		var yVecNorm = yVec / len;
 	
-		xVec = xVecNorm * 160;
-		yVec = yVecNorm * 160;
+		xVec = xVecNorm * real_radius;
+		yVec = yVecNorm * real_radius;
 	}	
 }
 else
@@ -34,4 +34,4 @@ else
 	yVec = 0;
 }
 
-arcade_drive(xVec / 160.0, -(yVec / 160.0));
+arcade_drive(xVec / real_radius, -(yVec / real_radius));

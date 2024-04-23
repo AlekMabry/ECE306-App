@@ -3,7 +3,7 @@ global.bAutoConnect = true;
 global.bAttemptingConnect = false;
 global.client = -1;
 global.vehicleIP = "192.168.1.128";
-global.vehiclePin = "1234";
+global.vehiclePin = "2424";
 global.vehiclePort = "8080";
 global.cmd = "";
 
@@ -30,3 +30,5 @@ portTextbox = instance_create_layer(portOffset, 0, 0, OTextbox,
 		field: global.vehiclePort,
 		eventID: 1
 	});
+	
+commandOffset = portOffset + 16 + (6 * charWidth) + 16;

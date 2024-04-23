@@ -10,7 +10,7 @@ if (global.bAutoConnect && !global.bConnected && !global.bAttemptingConnect)
 }
 
 // Every 200ms
-if (global.bConnected && stepTime++ >= 6)
+if (global.bThumbEnable && stepTime++ >= 6)
 {
 	// Convert to normalized values
 	var left = round(duty(global.vL));
@@ -35,10 +35,16 @@ if (global.bConnected && stepTime++ >= 6)
 		right = 0;
 	}	
 	
-	// Format command
+	var cmd = "/" + global.vehiclePin + "A" + to_hex(left) + to_hex(right) + "\r\n";
+	command(cmd);
+	
+	
+	/*
 	global.cmd = "/" + global.vehiclePin + "A" + to_hex(left) + to_hex(right) + "\r\n";
 	var buf = buffer_create(17, buffer_fixed, 1);
 	buffer_write(buf, buffer_string, global.cmd);
 	network_send_raw(global.client, buf, buffer_get_size(buf) - 1);
+	*/
+	
 	stepTime = 0;
 }

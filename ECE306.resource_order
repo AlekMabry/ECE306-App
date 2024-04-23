@@ -17,10 +17,13 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"OButton","order":4,"path":"objects/OButton/OButton.yy",},
     {"name":"ONetwork","order":1,"path":"objects/ONetwork/ONetwork.yy",},
     {"name":"OPotentiometer","order":3,"path":"objects/OPotentiometer/OPotentiometer.yy",},
     {"name":"OTextbox","order":2,"path":"objects/OTextbox/OTextbox.yy",},
+    {"name":"OToggleThumb","order":5,"path":"objects/OToggleThumb/OToggleThumb.yy",},
     {"name":"duty","order":3,"path":"scripts/duty/duty.yy",},
+    {"name":"command","order":4,"path":"scripts/command/command.yy",},
     {"name":"to_hex_char","order":2,"path":"scripts/to_hex_char/to_hex_char.yy",},
     {"name":"to_hex","order":1,"path":"scripts/to_hex/to_hex.yy",},
   ],
